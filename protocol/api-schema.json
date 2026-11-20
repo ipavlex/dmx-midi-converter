@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "device": {
+    "name": "DMX MIDI Converter"
+  },
+  "dmx": {
+    "lossTimeoutMs": 1000
+  },
+  "outputs": {
+    "usb": true,
+    "ble": false,
+    "rtp": false
+  },
+  "wifi": {
+    "mode": "ap",
+    "ssid": "DMX-MIDI-Setup"
+  },
+  "mappings": [
+    {
+      "id": "map-1",
+      "enabled": true,
+      "dmxChannel": 1,
+      "type": "cc",
+      "midiChannel": 1,
+      "midiNumber": 7,
+      "inputMin": 0,
+      "inputMax": 255,
+      "outputMin": 0,
+      "outputMax": 127,
+      "invert": false,
+      "deadband": 1,
+      "outputs": [
+        "usb"
+      ]
+    },
+    {
+      "id": "map-2",
+      "enabled": true,
+      "dmxChannel": 2,
+      "type": "note",
+      "midiChannel": 1,
+      "midiNumber": 60,
+      "thresholdOn": 20,
+      "thresholdOff": 10,
+      "velocity": 100,
+      "outputs": [
+        "usb"
+      ]
+    }
+  ]
+}
