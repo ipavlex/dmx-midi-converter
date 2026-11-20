@@ -18,52 +18,27 @@ See `docs/SPEC.md` for requirements and `docs/ARCHITECTURE.md` for design.
 
 
 ## Structure
+
+```
 dmx-midi-converter/
-│
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── ROADMAP.md
+│   └── SPEC.md
 ├── firmware/
-│   ├── main/
-│   │   └── app_main.cpp
-│   │
-│   ├── dmx/
-│   │   ├── dmx_receiver.cpp
-│   │   ├── dmx_parser.cpp
-│   │   └── dmx_state.cpp
-│   │
-│   ├── mapping/
-│   │   ├── mapping_engine.cpp
-│   │   ├── mapping_config.cpp
-│   │   └── value_transform.cpp
-│   │
-│   ├── midi/
-│   │   ├── midi_event.cpp
-│   │   ├── midi_router.cpp
-│   │   ├── usb_midi.cpp
-│   │   ├── ble_midi.cpp
-│   │   └── rtp_midi.cpp
-│   │
-│   ├── network/
-│   │   ├── wifi_manager.cpp
-│   │   ├── web_server.cpp
-│   │   └── rtp_session.cpp
-│   │
-│   ├── config/
-│   │   ├── config_manager.cpp
-│   │   └── presets.cpp
-│   │
-│   ├── system/
-│   │   ├── ota.cpp
-│   │   ├── diagnostics.cpp
-│   │   └── system_status.cpp
-│   │
-│   └── components/
-│
-├── web-ui/
-│   ├── src/
-│   ├── components/
-│   ├── pages/
-│   └── api/
-│
+│   └── README.md
 ├── protocol/
 │   └── api-schema.json
-│
-└── docs/
+├── web-ui/
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   └── styles.css
+│   ├── index.html
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── vite.config.ts
+└── README.md
+```
+
+The `firmware/` tree shown in `docs/ARCHITECTURE.md` (dmx/, mapping/, midi/, network/, config/, system/) is the target layout — firmware implementation has not started yet.
